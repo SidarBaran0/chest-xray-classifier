@@ -11,7 +11,6 @@ Modellen ble trent av et gruppemedlem på et medisinsk datasett og deretter lagr
 - `backend/` – Flask-backend som laster modellen og gjør prediksjoner
 - `frontend/` – React-app hvor brukeren kan laste opp røntgenbilder
 - `chest_xray_model.h5` – Treningsresultat (modell vi selv har trent)
-- `rapport.pdf` – Prosjektrapport
 - `README.md` – Denne filen
   
 ---
