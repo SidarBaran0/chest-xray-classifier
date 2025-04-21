@@ -17,7 +17,7 @@ Modellen ble trent av et gruppemedlem på et medisinsk datasett og deretter lagr
 
 ## 📊 Modellinformasjon
 
-- **Base-arkitektur:** Convolutional Neural Network
+- **Base-arkitektur:** Convolutional Neural Network (CNN)
 - **Treningsdata:** Chest X-Ray Images (Pneumonia) ([Kaggle-link](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia))
 - **Bildeformat:** 224x224 px, RGB
 - **Modellformat:** Keras `.h5`
