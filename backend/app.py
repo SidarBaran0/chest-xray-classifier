@@ -6,7 +6,7 @@ import numpy as np
 
 app = Flask(__name__)
 CORS(app)
-model = load_model("chest_xray_model.h5")
+model = load_model("xray_classifier_scratch.h5")
 img_size = (224, 224)
 
 
@@ -19,7 +19,7 @@ def predict():
     img_array = np.expand_dims(np.array(img) / 255.0, axis=0)
     prediction = model.predict(img_array)[0][0]
     print("Prediksjonsscore:", prediction)
-    result = "Positive" if prediction > 0.4 else "Negative"
+    result = "Positive" if prediction > 0.5 else "Negative"
     return jsonify({"prediction": result})
 if __name__ == "__main__":
     app.run(debug=True)
