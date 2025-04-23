@@ -5,6 +5,7 @@ export default function App() {
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(null);
   const [result, setResult] = useState("");
+  const [score, setScore] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const handleImageChange = (e) => {
@@ -12,6 +13,7 @@ export default function App() {
     setImage(file);
     setPreview(URL.createObjectURL(file));
     setResult("");
+    setScore(null);
   };
 
   const handleSubmit = async () => {
@@ -23,12 +25,18 @@ export default function App() {
     try {
       const response = await axios.post("http://127.0.0.1:5000/predict", formData);
       setResult(response.data.prediction);
+      setScore(Number(response.data.score)); // Sørger for tallverdi
     } catch (error) {
       console.error("Error sending image:", error);
       setResult("Feil ved sending av bilde.");
     }
     setLoading(false);
   };
+
+  // Beregn sikkerhet hvis score finnes
+  const certainty = score !== null && !isNaN(score)
+  ? (result === "Positive" ? score * 100 : (100 - score * 100)).toFixed(2)
+  : null;
 
   return (
     <div style={{
@@ -41,9 +49,18 @@ export default function App() {
       padding: "2rem",
       fontFamily: "Arial, sans-serif",
     }}>
-      <h1 style={{ fontSize: "2.5rem", fontWeight: "bold", marginBottom: "1.5rem" }}>🫁 Chest X-ray Predictor</h1>
+      <h1 style={{ fontSize: "2.5rem", fontWeight: "bold", marginBottom: "1.5rem" }}>
+        🫁 Chest X-ray Predictor
+      </h1>
 
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "1rem", width: "100%", maxWidth: "500px" }}>
+      <div style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: "1rem",
+        width: "100%",
+        maxWidth: "500px"
+      }}>
         <input
           type="file"
           accept="image/*"
@@ -55,7 +72,12 @@ export default function App() {
           <img
             src={preview}
             alt="Preview"
-            style={{ maxWidth: "100%", height: "auto", borderRadius: "0.5rem", boxShadow: "0 0 10px rgba(0,0,0,0.1)" }}
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+              borderRadius: "0.5rem",
+              boxShadow: "0 0 10px rgba(0,0,0,0.1)"
+            }}
           />
         )}
 
@@ -78,19 +100,36 @@ export default function App() {
         </button>
 
         {result && (
-          <p style={{ fontSize: "1.25rem", marginTop: "1rem", fontWeight: "600" }}>
-            Resultat:{" "}
-            <span style={{
-              color:
-                result === "Positive"
-                  ? "#dc2626"
-                  : result === "Feil ved sending av bilde."
-                  ? "#f59e0b"
+          <div style={{ marginTop: "1rem", textAlign: "center" }}>
+            <p style={{ fontSize: "1.25rem", fontWeight: "600" }}>
+              Resultat:{" "}
+              <span style={{
+                color:
+                  result === "Positive" ? "#dc2626"
+                  : result === "Feil ved sending av bilde." ? "#f59e0b"
                   : "#16a34a",
-            }}>
-              {result}
-            </span>
-          </p>
+              }}>
+                {result}
+              </span>
+            </p>
+
+            {certainty && (
+              <p style={{ fontSize: "1rem", marginTop: "0.5rem" }}>
+                Modellen er <strong>{certainty}%</strong> sikker på at bildet viser en{" "}
+                {result === "Positive" ? "lunge med lungebetennelse" : "frisk lunge"}.
+              </p>
+            )}
+
+            {score !== null && score > 45 && score < 55 && (
+              <p style={{
+                color: "#f59e0b",
+                fontStyle: "italic",
+                marginTop: "0.5rem"
+              }}>
+                ⚠️ Lav sikkerhet – resultatet bør vurderes med forsiktighet
+              </p>
+            )}
+          </div>
         )}
       </div>
     </div>

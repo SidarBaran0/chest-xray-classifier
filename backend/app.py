@@ -19,7 +19,8 @@ def predict():
     img_array = np.expand_dims(np.array(img) / 255.0, axis=0)
     prediction = model.predict(img_array)[0][0]
     print("Prediksjonsscore:", prediction)
-    result = "Positive" if prediction > 0.5 else "Negative"
-    return jsonify({"prediction": result})
+    result = "Positive" if prediction > 0.4 else "Negative"
+    percent = round(float(prediction) * 100, 2)
+    return jsonify({"prediction": result, "score": float(prediction)})
 if __name__ == "__main__":
     app.run(debug=True)
