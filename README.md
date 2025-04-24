@@ -36,7 +36,9 @@ cd chest-xray-classifier
 
 #### 2. Installer avhengigheter for backend
 Gå inn i backend-mappen og installer avhengigheter:
+
 cd backend
+
 pip install -r requirements.txt
 
 (Merk: Sørg for at du har Python 3.8 eller nyere installert)
