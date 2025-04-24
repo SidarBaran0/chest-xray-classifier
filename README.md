@@ -71,7 +71,7 @@ Brukeren starter med å laste opp et røntgenbilde via grensesnittet:
 
 Når bildet blir klassifisert som Normal:
 
-![Opplasting](./eksempler/01-opplasting.png)
+![Normal](./eksempler/02-normal.png)
 
 - Prediksjon: Normal
 
