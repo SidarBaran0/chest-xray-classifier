@@ -30,32 +30,32 @@ Modellen ble trent av et gruppemedlem på et medisinsk datasett og deretter lagr
 - npm
 
 #### 1. Klon repoet
-- git clone https://github.com/SidarBaran0/chest-xray-classifier.git
+git clone https://github.com/SidarBaran0/chest-xray-classifier.git
 
-- cd chest-xray-classifier
+cd chest-xray-classifier
 
 #### 2. Installer avhengigheter for backend
 - Gå inn i backend-mappen og installer avhengigheter:
 
-- cd backend
+cd backend
 
-- pip install -r requirements.txt
+pip install -r requirements.txt
 
 (Merk: Sørg for at du har Python 3.8 eller nyere installert)
 
 #### 3. Start Flask-backend
-- python app.py
+python app.py
 
 Dette starter API-et på http://127.0.0.1:5000.
 
 #### 4. Start frontend
 - Gå inn i frontend-mappen:
 
-- cd ../frontend
+cd ../frontend
 
-- npm install
+npm install
 
-- npm start
+npm start
 
 React-appen kjører da på http://localhost:3000.
 
