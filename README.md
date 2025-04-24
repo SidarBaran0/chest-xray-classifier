@@ -85,7 +85,7 @@ Når bildet blir klassifisert som Pneumonia:
 
 -Prediksjon: Pneumonia
 
--Sikkerhet: 97.17 %
+-Sikkerhet: 99.17 %
 
 
 ## 🧪 Testing
