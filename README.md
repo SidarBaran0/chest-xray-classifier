@@ -31,6 +31,7 @@ Modellen ble trent av et gruppemedlem på et medisinsk datasett og deretter lagr
 
 #### 1. Klon repoet
 git clone https://github.com/SidarBaran0/chest-xray-classifier.git
+
 cd chest-xray-classifier
 
 #### 2. Installer avhengigheter for backend
@@ -55,7 +56,7 @@ npm start
 React-appen kjører da på http://localhost:3000.
 
 ## 🧪 Testing
-Når appen kjører, kan du laste opp et røntgenbilde og få:
+Når appen kjører, kan du laste opp et røntgenbilde og få følgende informasjon:
 
 - Et prediksjonsresultat: Positive eller Negative
 
