@@ -35,7 +35,7 @@ git clone https://github.com/SidarBaran0/chest-xray-classifier.git
 cd chest-xray-classifier
 
 #### 2. Installer avhengigheter for backend
-- Gå inn i backend-mappen og installer avhengigheter:
+Gå inn i backend-mappen og installer avhengigheter:
 
 cd backend
 
@@ -49,7 +49,7 @@ python app.py
 Dette starter API-et på http://127.0.0.1:5000.
 
 #### 4. Start frontend
-- Gå inn i frontend-mappen:
+Gå inn i frontend-mappen:
 
 cd ../frontend
 
