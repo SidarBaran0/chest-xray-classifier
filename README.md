@@ -24,6 +24,11 @@ Modellen ble trent av et gruppemedlem på et medisinsk datasett og deretter lagr
 
 
 ## ⚙️ Hvordan kjøre prosjektet lokalt
+📌 Systemkrav:
+- Python 3.8+
+- Node.js 16+
+- npm
+
 1. Klon repoet
 git clone https://github.com/SidarBaran0/chest-xray-classifier.git
 cd chest-xray-classifier
@@ -52,9 +57,9 @@ React-appen kjører da på http://localhost:3000.
 ## 🧪 Testing
 Når appen kjører, kan du laste opp et røntgenbilde og få:
 
-Et prediksjonsresultat: Positive eller Negative
+- Et prediksjonsresultat: Positive eller Negative
 
-En sikkerhetsprosent (for eksempel: Modellen er 97.85 % sikker)
+- En sikkerhetsprosent (for eksempel: Modellen er 97.85 % sikker)
 
 ## 🧠 Formål
 Prosjektet viser hvordan deep learning kan brukes i helserelaterte problemstillinger. Vi demonstrerer en komplett pipeline fra datainnsamling og modelltrening til webbasert deployering og testing.
