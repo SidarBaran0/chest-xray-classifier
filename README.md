@@ -65,13 +65,13 @@ React-appen kjører da på http://localhost:3000.
 
 Brukeren starter med å laste opp et røntgenbilde via grensesnittet:
 
-BILDE
+![Opplasting](./eksempler/01-opplasting.png)
 
 ## ✅ Modellens respons – Normal
 
 Når bildet blir klassifisert som Normal:
 
-BILDE
+![Opplasting](./eksempler/01-opplasting.png)
 
 - Prediksjon: Normal
 
@@ -80,6 +80,8 @@ BILDE
 ## ❗ Modellens respons – Pneumonia
 
 Når bildet blir klassifisert som Pneumonia:
+
+![Pneumonia](./eksempler/03-pneumonia.png)
 
 -Prediksjon: Pneumonia
 
