@@ -29,23 +29,23 @@ Modellen ble trent av et gruppemedlem på et medisinsk datasett og deretter lagr
 - Node.js 16+
 - npm
 
-# 1. Klon repoet
+### 1. Klon repoet
 git clone https://github.com/SidarBaran0/chest-xray-classifier.git
 cd chest-xray-classifier
 
-# 2. Installer avhengigheter for backend
+### 2. Installer avhengigheter for backend
 Gå inn i backend-mappen og installer avhengigheter:
 cd backend
 pip install -r requirements.txt
 
 (Merk: Sørg for at du har Python 3.8 eller nyere installert)
 
-# 3. Start Flask-backend
+### 3. Start Flask-backend
 python app.py
 
 Dette starter API-et på http://127.0.0.1:5000.
 
-# 4. Start frontend
+### 4. Start frontend
 Gå inn i frontend-mappen:
 
 cd ../frontend
