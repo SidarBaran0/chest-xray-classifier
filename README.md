@@ -59,6 +59,33 @@ npm start
 
 React-appen kjører da på http://localhost:3000.
 
+## 🖼️ Eksempler på bruk
+
+### 📥 Opplasting av bilde
+
+Brukeren starter med å laste opp et røntgenbilde via grensesnittet:
+
+BILDE
+
+## ✅ Modellens respons – Normal
+
+Når bildet blir klassifisert som Normal:
+
+BILDE
+
+- Prediksjon: Normal
+
+- Sikkerhet: 98.3 %
+
+## ❗ Modellens respons – Pneumonia
+
+Når bildet blir klassifisert som Pneumonia:
+
+-Prediksjon: Pneumonia
+
+-Sikkerhet: 97.1 %
+
+
 ## 🧪 Testing
 Når appen kjører, kan du laste opp et røntgenbilde og få følgende informasjon:
 
