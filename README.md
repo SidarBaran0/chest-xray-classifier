@@ -75,7 +75,7 @@ Når bildet blir klassifisert som Normal:
 
 - Prediksjon: Normal
 
-- Sikkerhet: 98.3 %
+- Sikkerhet: 97.66 %
 
 ## ❗ Modellens respons – Pneumonia
 
@@ -85,7 +85,7 @@ Når bildet blir klassifisert som Pneumonia:
 
 -Prediksjon: Pneumonia
 
--Sikkerhet: 97.1 %
+-Sikkerhet: 97.17 %
 
 
 ## 🧪 Testing
